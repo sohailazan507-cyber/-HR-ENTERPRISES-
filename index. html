@@ -1,0 +1,956 @@
+<html>
+<!DOCTYPE html>
+<html lang="ur" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HR Enterprises | ایچ آر انٹرپرائزز - Doors, Kitchen, Almari &amp; Goli Qabza</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Google Fonts: Inter and Noto Nastaliq Urdu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            timber: {
+              50: '#fdf8f3',
+              100: '#faeedf',
+              200: '#f3d8bc',
+              300: '#e9bb8e',
+              400: '#dd9558',
+              500: '#d17835',
+              600: '#b85f27',
+              700: '#984b22',
+              800: '#7b3e22',
+              900: '#65351e',
+              950: '#261209'
+            },
+            brass: '#d4af37'
+          },
+          fontFamily: {
+            urdu: ['Noto Nastaliq Urdu', 'serif'],
+            english: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Typography and line-height settings per language direction */
+    .urdu-mode {
+      font-family: 'Noto Nastaliq Urdu', serif;
+      line-height: 2.25;
+    }
+
+    .english-mode {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.65;
+    }
+
+    /* Rich wood and brass surface backdrop */
+    .wood-surface {
+      background-color: #261209;
+      background-image:
+        repeating-linear-gradient(
+          90deg,
+          rgba(212, 175, 55, 0.04) 0px,
+          rgba(212, 175, 55, 0.04) 2px,
+          transparent 2px,
+          transparent 24px
+        ),
+        radial-gradient(circle at top right, rgba(209, 120, 53, 0.24), transparent 55%);
+    }
+
+    .nav-bar-glass {
+      background: rgba(34, 15, 7, 0.95);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body id="pageBody" dir="rtl" class="bg-stone-100 text-stone-800 urdu-mode antialiased selection:bg-timber-600 selection:text-white overflow-x-hidden">
+
+  <!-- Top Strip with Quick Call & On-Site Press Door Sizes -->
+  <div class="bg-timber-950 text-amber-200 border-b border-timber-800 py-2 px-4 text-xs sm:text-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div id="topBannerText" class="flex items-center gap-2 font-medium">
+        <i class="fa-solid fa-door-open text-brass"></i>
+        <span>33, 39, 42, 45 کے پریس دروازے موقع پر دستیاب</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-4">
+        <a href="tel:03456998618" class="hover:text-brass transition flex items-center gap-1.5 font-semibold" dir="ltr">
+          <i class="fa-solid fa-phone text-xs text-brass"></i>
+          <span>0345 6998618</span>
+        </a>
+        <a href="tel:03039581410" class="hover:text-brass transition flex items-center gap-1.5 font-semibold" dir="ltr">
+          <i class="fa-solid fa-phone-volume text-xs text-emerald-400"></i>
+          <span id="topSohailLabel">سہیل عظمت لوکل کال:</span>
+          <span>0303-9581410</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="sticky top-0 z-50 nav-bar-glass text-white border-b border-timber-800 shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+      <a href="#home" class="flex items-center gap-3 group min-w-0">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-timber-500 to-timber-900 border border-brass/60 flex items-center justify-center font-english font-extrabold text-lg text-brass shadow shrink-0 group-hover:scale-105 transition">
+          HR
+        </div>
+        <div class="truncate">
+          <div id="brandTitle" class="text-lg sm:text-2xl font-bold text-brass truncate">ایچ آر انٹرپرائزز</div>
+          <div id="brandSub" class="text-xs text-stone-300 truncate">مغل برادران</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-stone-200">
+        <a href="#home" id="navHome" class="hover:text-brass transition">صفحہ اول</a>
+        <a href="#catalog" id="navCatalog" class="hover:text-brass transition">دروازے، پینلز و خدمات</a>
+        <a href="#contact" id="navContact" class="hover:text-brass transition">رابطہ و پتہ</a>
+      </nav>
+
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <button
+          type="button"
+          id="langSwitchBtn"
+          onclick="toggleLanguage()"
+          class="bg-timber-800 hover:bg-timber-700 text-brass border border-brass/40 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition shadow cursor-pointer"
+        >
+          <i class="fa-solid fa-language text-base"></i>
+          <span id="langSwitchLabel">English</span>
+        </button>
+
+        <a
+          href="https://wa.me/923456998618"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 shadow transition"
+        >
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span id="headerWaLabel" class="hidden sm:inline">واٹس ایپ</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="wood-surface text-white py-14 sm:py-20 border-b border-timber-800">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-start">
+        <div class="inline-flex items-center gap-2 bg-timber-900/90 border border-brass/40 text-brass px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
+          <i class="fa-solid fa-hammer"></i>
+          <span id="heroBadge">مغل برادران • ڈسکہ</span>
+        </div>
+
+        <h1 id="heroTitle" class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+          ایچ آر انٹرپرائزز — پریس دروازے، کچن، الماری اور گلی قبضہ
+        </h1>
+
+        <p id="heroDesc" class="text-stone-200 text-sm sm:text-lg max-w-2xl mx-auto lg:mx-0">
+          ہمارے ہاں ہر سائز کے پریس دروازے ملائیشیا پینل، میلامائن پینل، ZRK پینل موجود ہیں۔ سی این سی + فائبر پلاسٹک دروازے آرڈر پر تیار کیے جاتے ہیں۔ دروازے کی فٹنگ، کچن اور الماری کا کام، اور لوہے کا گلی قبضہ کا کام تسلی بخش کیا جاتا ہے۔
+        </p>
+
+        <!-- Available Press Door Sizes Highlight -->
+        <div class="bg-timber-900/90 border border-amber-400/50 rounded-2xl p-4 sm:p-5 text-start shadow-lg">
+          <div class="flex items-start sm:items-center gap-3.5">
+            <div class="w-11 h-11 rounded-xl bg-brass/20 text-brass flex items-center justify-center text-xl shrink-0">
+              <i class="fa-solid fa-ruler-combined"></i>
+            </div>
+            <div>
+              <div id="heroSizesHeading" class="font-bold text-brass text-sm sm:text-base">
+                33, 39, 42, 45 کے پریس دروازے موقع پر دستیاب
+              </div>
+              <div class="flex flex-wrap gap-2 mt-2" dir="ltr">
+                <span class="px-3 py-1 rounded-lg bg-timber-950 border border-brass/40 font-english font-bold text-xs sm:text-sm text-amber-200">33</span>
+                <span class="px-3 py-1 rounded-lg bg-timber-950 border border-brass/40 font-english font-bold text-xs sm:text-sm text-amber-200">39</span>
+                <span class="px-3 py-1 rounded-lg bg-timber-950 border border-brass/40 font-english font-bold text-xs sm:text-sm text-amber-200">42</span>
+                <span class="px-3 py-1 rounded-lg bg-timber-950 border border-brass/40 font-english font-bold text-xs sm:text-sm text-amber-200">45</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call & Local Call Actions -->
+        <div class="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 pt-1">
+          <a
+            href="tel:03456998618"
+            class="bg-gradient-to-r from-timber-500 to-timber-700 hover:from-timber-400 hover:to-timber-600 text-white font-bold px-5 py-3.5 rounded-xl shadow-lg flex items-center gap-2 transition text-xs sm:text-sm"
+          >
+            <i class="fa-solid fa-phone"></i>
+            <span id="heroCallMain">کال کریں:</span>
+            <span class="font-english font-extrabold" dir="ltr">0345 6998618</span>
+          </a>
+
+          <a
+            href="tel:03039581410"
+            class="bg-timber-800 hover:bg-timber-700 text-amber-100 border border-brass/40 font-bold px-5 py-3.5 rounded-xl shadow-lg flex items-center gap-2 transition text-xs sm:text-sm"
+          >
+            <i class="fa-solid fa-phone-volume text-brass"></i>
+            <span id="heroLocalCall">سہیل عظمت لوکل کال:</span>
+            <span class="font-english font-extrabold" dir="ltr">0303-9581410</span>
+          </a>
+
+          <a
+            href="https://wa.me/923456998618"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-3.5 rounded-xl shadow-lg flex items-center gap-2 transition text-xs sm:text-sm"
+          >
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span id="heroWaBtn">واٹس ایپ آرڈر</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Summary Card -->
+      <div class="lg:col-span-5">
+        <div class="bg-stone-900/95 border border-timber-700 rounded-3xl p-6 sm:p-7 shadow-2xl space-y-5">
+          <div class="flex items-center justify-between border-b border-stone-800 pb-4">
+            <span id="summaryTitle" class="text-brass font-bold text-base sm:text-lg">خدمات و دستیاب مال</span>
+            <span id="summaryGroup" class="bg-timber-800 text-amber-100 text-xs font-semibold px-3 py-1 rounded-full border border-timber-600">
+              مغل برادران
+            </span>
+          </div>
+
+          <ul class="space-y-3 text-xs sm:text-sm text-stone-200">
+            <li class="flex items-center gap-3 bg-stone-800/75 p-3 rounded-xl border border-stone-700/70">
+              <i class="fa-solid fa-check text-emerald-400 shrink-0"></i>
+              <span id="sumItem1">پریس دروازے 33, 39, 42, 45 موقع پر دستیاب اور ہر سائز میں موجود</span>
+            </li>
+            <li class="flex items-center gap-3 bg-stone-800/75 p-3 rounded-xl border border-stone-700/70">
+              <i class="fa-solid fa-check text-emerald-400 shrink-0"></i>
+              <span id="sumItem2">ملائیشیا پینل، میلامائن پینل اور ZRK پینل</span>
+            </li>
+            <li class="flex items-center gap-3 bg-stone-800/75 p-3 rounded-xl border border-stone-700/70">
+              <i class="fa-solid fa-check text-emerald-400 shrink-0"></i>
+              <span id="sumItem3">سی این سی + فائبر پلاسٹک دروازے آرڈر پر تیار</span>
+            </li>
+            <li class="flex items-center gap-3 bg-stone-800/75 p-3 rounded-xl border border-stone-700/70">
+              <i class="fa-solid fa-check text-emerald-400 shrink-0"></i>
+              <span id="sumItem4">دروازے کی فٹنگ، کچن اور الماری کا کام، لوہے کا گلی قبضہ</span>
+            </li>
+          </ul>
+
+          <div class="bg-timber-950 border border-timber-800 rounded-2xl p-4 space-y-1.5 text-center">
+            <div id="sumGroupLabel" class="text-brass font-bold text-base">مغل برادران</div>
+            <div class="text-xs sm:text-sm font-english font-bold text-white" dir="ltr">0345 6998618</div>
+            <div class="text-xs sm:text-sm text-amber-200">
+              <span id="sumSohailLabel">سہیل عظمت لوکل کال:</span>
+              <span class="font-english font-bold" dir="ltr">0303-9581410</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Catalog: Press Doors, Panels, CNC & Fiber, Kitchen & Almari / Goli Qabza -->
+  <section id="catalog" class="py-16 bg-stone-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-8">
+        <span id="catalogTag" class="text-timber-700 font-bold text-xs sm:text-sm uppercase tracking-wider">مکمل فہرست</span>
+        <h2 id="catalogHeading" class="text-2xl sm:text-4xl font-extrabold text-stone-900 mt-2">
+          دروازے، پینلز، کچن، الماری اور گلی قبضہ
+        </h2>
+        <div class="w-20 h-1 bg-timber-600 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10" role="tablist" aria-label="Category Filter">
+        <button
+          type="button"
+          role="tab"
+          aria-selected="true"
+          data-category="all"
+          onclick="filterItems('all')"
+          class="cat-tab bg-timber-900 text-brass border border-timber-900 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer"
+        >
+          <span id="tabAll">All</span>
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-category="press-doors"
+          onclick="filterItems('press-doors')"
+          class="cat-tab bg-white hover:bg-timber-100 text-stone-800 border border-stone-300 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer"
+        >
+          <span id="tabPressDoors">Press Doors</span>
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-category="panels"
+          onclick="filterItems('panels')"
+          class="cat-tab bg-white hover:bg-timber-100 text-stone-800 border border-stone-300 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer"
+        >
+          <span id="tabPanels">Panels</span>
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-category="cnc-fiber"
+          onclick="filterItems('cnc-fiber')"
+          class="cat-tab bg-white hover:bg-timber-100 text-stone-800 border border-stone-300 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer"
+        >
+          <span id="tabCncFiber">CNC &amp; Fiber</span>
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected="false"
+          data-category="kitchen-almari-goli"
+          onclick="filterItems('kitchen-almari-goli')"
+          class="cat-tab bg-white hover:bg-timber-100 text-stone-800 border border-stone-300 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition cursor-pointer"
+        >
+          <span id="tabKitchenAlmariGoli">Kitchen &amp; Almari / Goli Qabza</span>
+        </button>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1: Press Doors (33, 39, 42, 45 & All Sizes) -->
+        <article data-category="press-doors" class="catalog-card bg-white rounded-2xl border border-stone-200 shadow-md hover:shadow-xl transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-timber-100 text-timber-800 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-door-closed"></i>
+              </div>
+              <span class="badge-press text-xs font-bold px-3 py-1 rounded-full bg-amber-100 text-timber-900">پریس دروازے</span>
+            </div>
+            <h3 id="card1Title" class="text-lg sm:text-xl font-bold text-stone-900 mb-2">پریس دروازے 33, 39, 42, 45</h3>
+            <p id="card1Desc" class="text-stone-600 text-xs sm:text-sm mb-5">
+              ہمارے ہاں ہر سائز کے پریس دروازے موجود ہیں۔ 33, 39, 42, 45 کے پریس دروازے موقع پر دستیاب ہیں۔
+            </p>
+          </div>
+          <a
+            href="https://wa.me/923456998618?text=Hello%20HR%20Enterprises%2C%20I%20am%20inquiring%20about%20Press%20Doors%2033%2C%2039%2C%2042%2C%2045."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="wa-card-btn w-full bg-timber-900 hover:bg-timber-800 text-brass font-bold py-2.5 px-4 rounded-xl text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>واٹس ایپ پر معلوم کریں</span>
+          </a>
+        </article>
+
+        <!-- Card 2: Malaysia Panel, Melamine Panel, ZRK Panel -->
+        <article data-category="panels" class="catalog-card bg-white rounded-2xl border border-stone-200 shadow-md hover:shadow-xl transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-timber-100 text-timber-800 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <span class="badge-panels text-xs font-bold px-3 py-1 rounded-full bg-amber-100 text-timber-900">پینلز</span>
+            </div>
+            <h3 id="card2Title" class="text-lg sm:text-xl font-bold text-stone-900 mb-2">ملائیشیا پینل، میلامائن پینل، ZRK پینل</h3>
+            <p id="card2Desc" class="text-stone-600 text-xs sm:text-sm mb-5">
+              ہمارے ہاں ہر سائز کے پریس دروازے ملائیشیا پینل، میلامائن پینل، ZRK پینل موجود ہیں۔
+            </p>
+          </div>
+          <a
+            href="https://wa.me/923456998618?text=Hello%20HR%20Enterprises%2C%20I%20am%20inquiring%20about%20Malaysia%20Panel%2C%20Melamine%20Panel%2C%20and%20ZRK%20Panel."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="wa-card-btn w-full bg-timber-900 hover:bg-timber-800 text-brass font-bold py-2.5 px-4 rounded-xl text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>واٹس ایپ پر معلوم کریں</span>
+          </a>
+        </article>
+
+        <!-- Card 3: CNC + Fiber Plastic Doors -->
+        <article data-category="cnc-fiber" class="catalog-card bg-white rounded-2xl border border-stone-200 shadow-md hover:shadow-xl transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-timber-100 text-timber-800 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <span class="badge-cnc text-xs font-bold px-3 py-1 rounded-full bg-amber-100 text-timber-900">سی این سی + فائبر</span>
+            </div>
+            <h3 id="card3Title" class="text-lg sm:text-xl font-bold text-stone-900 mb-2">سی این سی + فائبر پلاسٹک دروازے</h3>
+            <p id="card3Desc" class="text-stone-600 text-xs sm:text-sm mb-5">
+              سی این سی + فائبر پلاسٹک کے دروازے کا تمام مال آرڈر پر تیار کیا جاتا ہے۔
+            </p>
+          </div>
+          <a
+            href="https://wa.me/923456998618?text=Hello%20HR%20Enterprises%2C%20I%20want%20a%20custom%20order%20for%20CNC%20and%20Fiber%20Plastic%20doors."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="wa-card-btn w-full bg-timber-900 hover:bg-timber-800 text-brass font-bold py-2.5 px-4 rounded-xl text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>واٹس ایپ پر معلوم کریں</span>
+          </a>
+        </article>
+
+        <!-- Card 4: Door Fitting -->
+        <article data-category="kitchen-almari-goli" class="catalog-card bg-white rounded-2xl border border-stone-200 shadow-md hover:shadow-xl transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-timber-100 text-timber-800 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+              <span class="badge-kag text-xs font-bold px-3 py-1 rounded-full bg-amber-100 text-timber-900">فٹنگ و قبضہ</span>
+            </div>
+            <h3 id="card4Title" class="text-lg sm:text-xl font-bold text-stone-900 mb-2">دروازے کی فٹنگ</h3>
+            <p id="card4Desc" class="text-stone-600 text-xs sm:text-sm mb-5">
+              دروازے کی فٹنگ کا کام معیاری اور تسلی بخش انداز میں کیا جاتا ہے۔
+            </p>
+          </div>
+          <a
+            href="https://wa.me/923456998618?text=Hello%20HR%20Enterprises%2C%20I%20need%20door%20fitting%20service."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="wa-card-btn w-full bg-timber-900 hover:bg-timber-800 text-brass font-bold py-2.5 px-4 rounded-xl text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>واٹس ایپ پر معلوم کریں</span>
+          </a>
+        </article>
+
+        <!-- Card 5: Kitchen and Almari Work -->
+        <article data-category="kitchen-almari-goli" class="catalog-card bg-white rounded-2xl border border-stone-200 shadow-md hover:shadow-xl transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-timber-100 text-timber-800 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-kitchen-set"></i>
+              </div>
+              <span class="badge-kag text-xs font-bold px-3 py-1 rounded-full bg-amber-100 text-timber-900">کچن و الماری</span>
+            </div>
+            <h3 id="card5Title" class="text-lg sm:text-xl font-bold text-stone-900 mb-2">کچن اور الماری کا کام</h3>
+            <p id="card5Desc" class="text-stone-600 text-xs sm:text-sm mb-5">
+              کچن اور الماری کا کام مضبوطی اور تسلی بخش فٹنگ کے ساتھ کیا جاتا ہے۔
+            </p>
+          </div>
+          <a
+            href="https://wa.me/923456998618?text=Hello%20HR%20Enterprises%2C%20I%20need%20Kitchen%20and%20Almari%20work."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="wa-card-btn w-full bg-timber-900 hover:bg-timber-800 text-brass font-bold py-2.5 px-4 rounded-xl text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>واٹس ایپ پر معلوم کریں</span>
+          </a>
+        </article>
+
+        <!-- Card 6: Iron Goli Qabza / گلی قبضہ -->
+        <article data-category="kitchen-almari-goli" class="catalog-card bg-white rounded-2xl border border-stone-200 shadow-md hover:shadow-xl transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="w-12 h-12 rounded-xl bg-timber-100 text-timber-800 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-link"></i>
+              </div>
+              <span class="badge-kag text-xs font-bold px-3 py-1 rounded-full bg-amber-100 text-timber-900">گلی قبضہ</span>
+            </div>
+            <h3 id="card6Title" class="text-lg sm:text-xl font-bold text-stone-900 mb-2">لوہے کا گلی قبضہ</h3>
+            <p id="card6Desc" class="text-stone-600 text-xs sm:text-sm mb-5">
+              لوہے کا گلی قبضہ اور گلی قبضہ کا کام تسلی بخش کیا جاتا ہے۔
+            </p>
+          </div>
+          <a
+            href="https://wa.me/923456998618?text=Hello%20HR%20Enterprises%2C%20I%20need%20Iron%20Goli%20Qabza%20work."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="wa-card-btn w-full bg-timber-900 hover:bg-timber-800 text-brass font-bold py-2.5 px-4 rounded-xl text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>واٹس ایپ پر معلوم کریں</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & WhatsApp Inquiry Form Section -->
+  <section id="contact" class="py-16 wood-surface text-white border-t border-timber-800">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span id="contactTag" class="text-brass font-bold text-xs sm:text-sm uppercase tracking-wider">رابطہ اور پتہ</span>
+        <h2 id="contactHeading" class="text-2xl sm:text-4xl font-extrabold text-white mt-2">
+          ایچ آر انٹرپرائزز — مغل برادران
+        </h2>
+        <div class="w-20 h-1 bg-brass mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Contact & Address Info -->
+        <div class="lg:col-span-5 bg-stone-900/95 border border-timber-700 rounded-2xl p-6 sm:p-8 shadow-xl space-y-6">
+          <div>
+            <div id="infoBusinessLabel" class="text-xs font-bold text-brass uppercase">ادارہ</div>
+            <div id="infoBusinessName" class="text-xl font-extrabold text-white mt-0.5">ایچ آر انٹرپرائزز</div>
+            <div id="infoGroupName" class="text-sm font-semibold text-amber-200 mt-0.5">مغل برادران</div>
+          </div>
+
+          <div class="border-t border-stone-800 pt-4 space-y-3">
+            <div class="flex items-center justify-between gap-2">
+              <span id="infoMainPhoneLabel" class="text-xs text-stone-400">رابطہ نمبر</span>
+              <a href="tel:03456998618" class="font-english font-extrabold text-sm sm:text-base text-brass hover:underline" dir="ltr">
+                0345 6998618
+              </a>
+            </div>
+            <div class="flex items-center justify-between gap-2">
+              <span id="infoSohailPhoneLabel" class="text-xs text-stone-400">سہیل عظمت لوکل کال</span>
+              <a href="tel:03039581410" class="font-english font-extrabold text-sm sm:text-base text-emerald-400 hover:underline" dir="ltr">
+                0303-9581410
+              </a>
+            </div>
+          </div>
+
+          <div class="border-t border-stone-800 pt-4">
+            <div id="infoAddressLabel" class="text-xs font-bold text-brass uppercase flex items-center gap-2">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>پتہ</span>
+            </div>
+            <p id="infoAddressValue" class="text-xs sm:text-sm text-stone-200 mt-1.5">
+              گلہ کیری کارن والانزد آس سنٹر پسرور بائی پاس ڈسکہ
+            </p>
+          </div>
+
+          <div class="pt-2 flex flex-wrap gap-3">
+            <a
+              href="tel:03039581410"
+              class="flex-1 bg-timber-800 hover:bg-timber-700 text-amber-100 border border-brass/40 font-bold py-3 px-4 rounded-xl text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition"
+            >
+              <i class="fa-solid fa-phone-volume text-brass"></i>
+              <span id="infoLocalCallBtn">لوکل کال</span>
+            </a>
+            <a
+              href="https://wa.me/923456998618"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-4 rounded-xl text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition"
+            >
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span id="infoWaBtn">واٹس ایپ</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- WhatsApp Inquiry / Order Form -->
+        <div class="lg:col-span-7 bg-white text-stone-800 rounded-2xl border border-stone-200 shadow-xl p-6 sm:p-8">
+          <h3 id="formTitle" class="text-xl sm:text-2xl font-extrabold text-stone-900">واٹس ایپ انکوائری / آرڈر فارم</h3>
+          <p id="formDesc" class="text-xs sm:text-sm text-stone-600 mt-1 mb-6">
+            اپنی ضرورت یا آرڈر کی تفصیل لکھیں اور براہِ راست واٹس ایپ پر بھیجیں۔
+          </p>
+
+          <form id="whatsappOrderForm" onsubmit="sendWhatsAppInquiry(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label id="lblName" for="customerName" class="block text-xs font-bold text-stone-700 mb-1.5">نام *</label>
+                <input
+                  type="text"
+                  id="customerName"
+                  required
+                  placeholder="اپنا نام لکھیں"
+                  class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-stone-50 text-sm focus:outline-none focus:ring-2 focus:ring-timber-500"
+                />
+              </div>
+
+              <div>
+                <label id="lblPhone" for="customerPhone" class="block text-xs font-bold text-stone-700 mb-1.5">فون نمبر *</label>
+                <input
+                  type="tel"
+                  id="customerPhone"
+                  required
+                  dir="ltr"
+                  placeholder="0345 6998618"
+                  class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-stone-50 text-sm focus:outline-none focus:ring-2 focus:ring-timber-500"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label id="lblCategory" for="orderCategory" class="block text-xs font-bold text-stone-700 mb-1.5">آئٹم / سروس</label>
+                <select
+                  id="orderCategory"
+                  class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-stone-50 text-sm focus:outline-none focus:ring-2 focus:ring-timber-500"
+                >
+                  <option value="Press Doors 33, 39, 42, 45">پریس دروازے 33, 39, 42, 45</option>
+                  <option value="Malaysia Panel, Melamine Panel, ZRK Panel">ملائیشیا پینل، میلامائن پینل، ZRK پینل</option>
+                  <option value="CNC + Fiber Plastic Doors Order">سی این سی + فائبر پلاسٹک دروازے آرڈر پر</option>
+                  <option value="Door Fitting">دروازے کی فٹنگ</option>
+                  <option value="Kitchen and Almari Work">کچن اور الماری کا کام</option>
+                  <option value="Iron Goli Qabza">لوہے کا گلی قبضہ</option>
+                </select>
+              </div>
+
+              <div>
+                <label id="lblDetails" for="orderDetails" class="block text-xs font-bold text-stone-700 mb-1.5">سائز / تفصیل</label>
+                <input
+                  type="text"
+                  id="orderDetails"
+                  placeholder="مثلاً: 39 یا کچن اور الماری کا کام"
+                  class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-stone-50 text-sm focus:outline-none focus:ring-2 focus:ring-timber-500"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label id="lblNotes" for="orderNotes" class="block text-xs font-bold text-stone-700 mb-1.5">پیغام</label>
+              <textarea
+                id="orderNotes"
+                rows="3"
+                placeholder="مزید تفصیل یہاں لکھیں..."
+                class="w-full px-4 py-3 rounded-xl border border-stone-300 bg-stone-50 text-sm focus:outline-none focus:ring-2 focus:ring-timber-500"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-md flex items-center justify-center gap-2 text-sm sm:text-base transition cursor-pointer"
+            >
+              <i class="fa-brands fa-whatsapp text-xl"></i>
+              <span id="submitFormBtn">واٹس ایپ پر آرڈر / انکوائری بھیجیں</span>
+            </button>
+
+            <div id="formNotice" class="hidden text-xs sm:text-sm font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 rounded-xl p-3"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-timber-950 text-stone-300 py-8 border-t border-timber-800 text-center">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <div id="footerBrand" class="text-brass font-bold text-lg">ایچ آر انٹرپرائزز — مغل برادران</div>
+      <p id="footerAddress" class="text-xs sm:text-sm text-stone-400">
+        گلہ کیری کارن والانزد آس سنٹر پسرور بائی پاس ڈسکہ
+      </p>
+      <p class="text-xs text-stone-400" dir="ltr">
+        0345 6998618 | 0303-9581410
+      </p>
+      <p id="footerCopy" class="text-xs text-stone-500 pt-2">
+        © 2026 HR Enterprises. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    let currentLang = 'ur';
+    let currentCategory = 'all';
+
+    // Bilingual dictionary for Urdu (RTL) and English (LTR)
+    const i18n = {
+      ur: {
+        dir: 'rtl',
+        fontClass: 'urdu-mode',
+        langSwitchLabel: 'English',
+        topBannerText: '33, 39, 42, 45 کے پریس دروازے موقع پر دستیاب',
+        topSohailLabel: 'سہیل عظمت لوکل کال:',
+        brandTitle: 'ایچ آر انٹرپرائزز',
+        brandSub: 'مغل برادران',
+        navHome: 'صفحہ اول',
+        navCatalog: 'دروازے، پینلز و خدمات',
+        navContact: 'رابطہ و پتہ',
+        headerWaLabel: 'واٹس ایپ',
+        heroBadge: 'مغل برادران • ڈسکہ',
+        heroTitle: 'ایچ آر انٹرپرائزز — پریس دروازے، کچن، الماری اور گلی قبضہ',
+        heroDesc: 'ہمارے ہاں ہر سائز کے پریس دروازے ملائیشیا پینل، میلامائن پینل، ZRK پینل موجود ہیں۔ سی این سی + فائبر پلاسٹک دروازے آرڈر پر تیار کیے جاتے ہیں۔ دروازے کی فٹنگ، کچن اور الماری کا کام، اور لوہے کا گلی قبضہ کا کام تسلی بخش کیا جاتا ہے۔',
+        heroSizesHeading: '33, 39, 42, 45 کے پریس دروازے موقع پر دستیاب',
+        heroCallMain: 'کال کریں:',
+        heroLocalCall: 'سہیل عظمت لوکل کال:',
+        heroWaBtn: 'واٹس ایپ آرڈر',
+        summaryTitle: 'خدمات و دستیاب مال',
+        summaryGroup: 'مغل برادران',
+        sumItem1: 'پریس دروازے 33, 39, 42, 45 موقع پر دستیاب اور ہر سائز میں موجود',
+        sumItem2: 'ملائیشیا پینل، میلامائن پینل اور ZRK پینل',
+        sumItem3: 'سی این سی + فائبر پلاسٹک دروازے آرڈر پر تیار',
+        sumItem4: 'دروازے کی فٹنگ، کچن اور الماری کا کام، لوہے کا گلی قبضہ',
+        sumGroupLabel: 'مغل برادران',
+        sumSohailLabel: 'سہیل عظمت لوکل کال:',
+        catalogTag: 'مکمل فہرست',
+        catalogHeading: 'دروازے، پینلز، کچن، الماری اور گلی قبضہ',
+        tabAll: 'All',
+        tabPressDoors: 'Press Doors',
+        tabPanels: 'Panels',
+        tabCncFiber: 'CNC & Fiber',
+        tabKitchenAlmariGoli: 'Kitchen & Almari / Goli Qabza',
+        badgePress: 'پریس دروازے',
+        badgePanels: 'پینلز',
+        badgeCnc: 'سی این سی + فائبر',
+        badgeKag: 'کچن، الماری و گلی قبضہ',
+        card1Title: 'پریس دروازے 33, 39, 42, 45',
+        card1Desc: 'ہمارے ہاں ہر سائز کے پریس دروازے موجود ہیں۔ 33, 39, 42, 45 کے پریس دروازے موقع پر دستیاب ہیں۔',
+        card2Title: 'ملائیشیا پینل، میلامائن پینل، ZRK پینل',
+        card2Desc: 'ہمارے ہاں ہر سائز کے پریس دروازے ملائیشیا پینل، میلامائن پینل، ZRK پینل موجود ہیں۔',
+        card3Title: 'سی این سی + فائبر پلاسٹک دروازے',
+        card3Desc: 'سی این سی + فائبر پلاسٹک کے دروازے کا تمام مال آرڈر پر تیار کیا جاتا ہے۔',
+        card4Title: 'دروازے کی فٹنگ',
+        card4Desc: 'دروازے کی فٹنگ کا کام معیاری اور تسلی بخش انداز میں کیا جاتا ہے۔',
+        card5Title: 'کچن اور الماری کا کام',
+        card5Desc: 'کچن اور الماری کا کام مضبوطی اور تسلی بخش فٹنگ کے ساتھ کیا جاتا ہے۔',
+        card6Title: 'لوہے کا گلی قبضہ',
+        card6Desc: 'لوہے کا گلی قبضہ اور گلی قبضہ کا کام تسلی بخش کیا جاتا ہے۔',
+        waCardBtn: 'واٹس ایپ پر معلوم کریں',
+        contactTag: 'رابطہ اور پتہ',
+        contactHeading: 'ایچ آر انٹرپرائزز — مغل برادران',
+        infoBusinessLabel: 'ادارہ',
+        infoBusinessName: 'ایچ آر انٹرپرائزز',
+        infoGroupName: 'مغل برادران',
+        infoMainPhoneLabel: 'رابطہ نمبر',
+        infoSohailPhoneLabel: 'سہیل عظمت لوکل کال',
+        infoAddressLabel: 'پتہ',
+        infoAddressValue: 'گلہ کیری کارن والانزد آس سنٹر پسرور بائی پاس ڈسکہ',
+        infoLocalCallBtn: 'لوکل کال',
+        infoWaBtn: 'واٹس ایپ',
+        formTitle: 'واٹس ایپ انکوائری / آرڈر فارم',
+        formDesc: 'اپنی ضرورت یا آرڈر کی تفصیل لکھیں اور براہِ راست واٹس ایپ پر بھیجیں۔',
+        lblName: 'نام *',
+        namePlaceholder: 'اپنا نام لکھیں',
+        lblPhone: 'فون نمبر *',
+        phonePlaceholder: '0345 6998618',
+        lblCategory: 'آئٹم / سروس',
+        lblDetails: 'سائز / تفصیل',
+        detailsPlaceholder: 'مثلاً: 39 یا کچن اور الماری کا کام',
+        lblNotes: 'پیغام',
+        notesPlaceholder: 'مزید تفصیل یہاں لکھیں...',
+        submitFormBtn: 'واٹس ایپ پر آرڈر / انکوائری بھیجیں',
+        noticeText: 'واٹس ایپ پیغام تیار کر دیا گیا ہے۔ اگر نئی ونڈو نہ کھلے تو 0345 6998618 یا لوکل کال 0303-9581410 پر رابطہ کریں۔',
+        footerBrand: 'ایچ آر انٹرپرائزز — مغل برادران',
+        footerAddress: 'گلہ کیری کارن والانزد آس سنٹر پسرور بائی پاس ڈسکہ',
+        footerCopy: '© 2026 HR Enterprises. All rights reserved.',
+        categoryOptions: [
+          { value: 'Press Doors 33, 39, 42, 45', label: 'پریس دروازے 33, 39, 42, 45' },
+          { value: 'Malaysia Panel, Melamine Panel, ZRK Panel', label: 'ملائیشیا پینل، میلامائن پینل، ZRK پینل' },
+          { value: 'CNC + Fiber Plastic Doors Order', label: 'سی این سی + فائبر پلاسٹک دروازے آرڈر پر' },
+          { value: 'Door Fitting', label: 'دروازے کی فٹنگ' },
+          { value: 'Kitchen and Almari Work', label: 'کچن اور الماری کا کام' },
+          { value: 'Iron Goli Qabza', label: 'لوہے کا گلی قبضہ' }
+        ]
+      },
+      en: {
+        dir: 'ltr',
+        fontClass: 'english-mode',
+        langSwitchLabel: 'اردو',
+        topBannerText: '33, 39, 42, 45 Press Doors Available On-Site',
+        topSohailLabel: 'Sohail Azmat Local Call:',
+        brandTitle: 'HR Enterprises',
+        brandSub: 'Mughal Brothers',
+        navHome: 'Home',
+        navCatalog: 'Catalog & Services',
+        navContact: 'Contact & Location',
+        headerWaLabel: 'WhatsApp',
+        heroBadge: 'Mughal Brothers • Daska',
+        heroTitle: 'HR Enterprises — Press Doors, Kitchen, Almari & Goli Qabza',
+        heroDesc: 'Press doors in all sizes with Malaysia Panel, Melamine Panel, and ZRK Panel. CNC + Fiber Plastic doors made to order. Door fitting, kitchen and almari work, and iron Goli Qabza work done with satisfaction.',
+        heroSizesHeading: '33, 39, 42, 45 Press Doors Available On-Site',
+        heroCallMain: 'Call:',
+        heroLocalCall: 'Sohail Azmat Local Call:',
+        heroWaBtn: 'WhatsApp Order',
+        summaryTitle: 'Services & Stock',
+        summaryGroup: 'Mughal Brothers',
+        sumItem1: 'Press doors 33, 39, 42, 45 available on-site and in all sizes',
+        sumItem2: 'Malaysia Panel, Melamine Panel, and ZRK Panel',
+        sumItem3: 'CNC + Fiber Plastic doors made to order',
+        sumItem4: 'Door fitting, kitchen and almari work, iron Goli Qabza',
+        sumGroupLabel: 'Mughal Brothers',
+        sumSohailLabel: 'Sohail Azmat Local Call:',
+        catalogTag: 'Complete Catalog',
+        catalogHeading: 'Doors, Panels, Kitchen, Almari & Goli Qabza',
+        tabAll: 'All',
+        tabPressDoors: 'Press Doors',
+        tabPanels: 'Panels',
+        tabCncFiber: 'CNC & Fiber',
+        tabKitchenAlmariGoli: 'Kitchen & Almari / Goli Qabza',
+        badgePress: 'Press Doors',
+        badgePanels: 'Panels',
+        badgeCnc: 'CNC & Fiber',
+        badgeKag: 'Kitchen, Almari & Goli Qabza',
+        card1Title: 'Press Doors 33, 39, 42, 45',
+        card1Desc: 'Press doors in all sizes available. 33, 39, 42, 45 press doors available on-site.',
+        card2Title: 'Malaysia Panel, Melamine Panel, ZRK Panel',
+        card2Desc: 'Press doors in all sizes with Malaysia Panel, Melamine Panel, and ZRK Panel.',
+        card3Title: 'CNC + Fiber Plastic Doors',
+        card3Desc: 'All CNC + Fiber Plastic doors made to order.',
+        card4Title: 'Door Fitting',
+        card4Desc: 'Door fitting completed cleanly and reliably.',
+        card5Title: 'Kitchen and Almari Work',
+        card5Desc: 'Kitchen and almari work completed with sturdy build and fitting.',
+        card6Title: 'Iron Goli Qabza',
+        card6Desc: 'Iron Goli Qabza and Goli Qabza fitting work done with full satisfaction.',
+        waCardBtn: 'Inquire on WhatsApp',
+        contactTag: 'Contact & Location',
+        contactHeading: 'HR Enterprises — Mughal Brothers',
+        infoBusinessLabel: 'Business',
+        infoBusinessName: 'HR Enterprises',
+        infoGroupName: 'Mughal Brothers',
+        infoMainPhoneLabel: 'Contact Number',
+        infoSohailPhoneLabel: 'Sohail Azmat Local Call',
+        infoAddressLabel: 'Address',
+        infoAddressValue: 'Galla Mandi Corner, Near Old Bus Stand, Pasrur Bypass, Daska',
+        infoLocalCallBtn: 'Local Call',
+        infoWaBtn: 'WhatsApp',
+        formTitle: 'WhatsApp Inquiry / Order Form',
+        formDesc: 'Enter your requirement or order details and send directly via WhatsApp.',
+        lblName: 'Name *',
+        namePlaceholder: 'Enter your name',
+        lblPhone: 'Phone Number *',
+        phonePlaceholder: '0345 6998618',
+        lblCategory: 'Item / Service',
+        lblDetails: 'Size / Details',
+        detailsPlaceholder: 'e.g., 39 or Kitchen and Almari work',
+        lblNotes: 'Message',
+        notesPlaceholder: 'Write additional details here...',
+        submitFormBtn: 'Send Inquiry / Order on WhatsApp',
+        noticeText: 'WhatsApp message prepared. If a new window did not open, call 0345 6998618 or Sohail Azmat local call 0303-9581410.',
+        footerBrand: 'HR Enterprises — Mughal Brothers',
+        footerAddress: 'Galla Mandi Corner, Near Old Bus Stand, Pasrur Bypass, Daska',
+        footerCopy: '© 2026 HR Enterprises. All rights reserved.',
+        categoryOptions: [
+          { value: 'Press Doors 33, 39, 42, 45', label: 'Press Doors 33, 39, 42, 45' },
+          { value: 'Malaysia Panel, Melamine Panel, ZRK Panel', label: 'Malaysia Panel, Melamine Panel, ZRK Panel' },
+          { value: 'CNC + Fiber Plastic Doors Order', label: 'CNC + Fiber Plastic Doors Made to Order' },
+          { value: 'Door Fitting', label: 'Door Fitting' },
+          { value: 'Kitchen and Almari Work', label: 'Kitchen and Almari Work' },
+          { value: 'Iron Goli Qabza', label: 'Iron Goli Qabza' }
+        ]
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'ur' ? 'en' : 'ur';
+      renderLanguage(currentLang);
+    }
+
+    function renderLanguage(lang) {
+      try {
+        const dict = i18n[lang];
+        const body = document.getElementById('pageBody');
+        body.setAttribute('dir', dict.dir);
+        body.setAttribute('lang', lang);
+        body.classList.remove('urdu-mode', 'english-mode');
+        body.classList.add(dict.fontClass);
+
+        const ids = [
+          'langSwitchLabel', 'topBannerText', 'topSohailLabel',
+          'brandTitle', 'brandSub', 'navHome', 'navCatalog', 'navContact',
+          'headerWaLabel', 'heroBadge', 'heroTitle', 'heroDesc',
+          'heroSizesHeading', 'heroCallMain', 'heroLocalCall', 'heroWaBtn',
+          'summaryTitle', 'summaryGroup', 'sumItem1', 'sumItem2', 'sumItem3', 'sumItem4',
+          'sumGroupLabel', 'sumSohailLabel', 'catalogTag', 'catalogHeading',
+          'tabAll', 'tabPressDoors', 'tabPanels', 'tabCncFiber', 'tabKitchenAlmariGoli',
+          'card1Title', 'card1Desc', 'card2Title', 'card2Desc',
+          'card3Title', 'card3Desc', 'card4Title', 'card4Desc',
+          'card5Title', 'card5Desc', 'card6Title', 'card6Desc',
+          'contactTag', 'contactHeading', 'infoBusinessLabel', 'infoBusinessName',
+          'infoGroupName', 'infoMainPhoneLabel', 'infoSohailPhoneLabel',
+          'infoAddressLabel', 'infoAddressValue', 'infoLocalCallBtn', 'infoWaBtn',
+          'formTitle', 'formDesc', 'lblName', 'lblPhone', 'lblCategory',
+          'lblDetails', 'lblNotes', 'submitFormBtn', 'footerBrand',
+          'footerAddress', 'footerCopy'
+        ];
+
+        ids.forEach((id) => {
+          const el = document.getElementById(id);
+          if (el && dict[id] !== undefined) {
+            el.textContent = dict[id];
+          }
+        });
+
+        document.querySelectorAll('.badge-press').forEach((el) => { el.textContent = dict.badgePress; });
+        document.querySelectorAll('.badge-panels').forEach((el) => { el.textContent = dict.badgePanels; });
+        document.querySelectorAll('.badge-cnc').forEach((el) => { el.textContent = dict.badgeCnc; });
+        document.querySelectorAll('.badge-kag').forEach((el) => { el.textContent = dict.badgeKag; });
+        document.querySelectorAll('.wa-card-btn span').forEach((el) => { el.textContent = dict.waCardBtn; });
+
+        document.getElementById('customerName').placeholder = dict.namePlaceholder;
+        document.getElementById('customerPhone').placeholder = dict.phonePlaceholder;
+        document.getElementById('orderDetails').placeholder = dict.detailsPlaceholder;
+        document.getElementById('orderNotes').placeholder = dict.notesPlaceholder;
+
+        const selectEl = document.getElementById('orderCategory');
+        const selectedVal = selectEl.value;
+        selectEl.innerHTML = '';
+        dict.categoryOptions.forEach((item) => {
+          const opt = document.createElement('option');
+          opt.value = item.value;
+          opt.textContent = item.label;
+          if (item.value === selectedVal) {
+            opt.selected = true;
+          }
+          selectEl.appendChild(opt);
+        });
+      } catch (error) {
+        console.error('Language switch error:', error);
+      }
+    }
+
+    function filterItems(category) {
+      try {
+        currentCategory = category;
+        const cards = document.querySelectorAll('.catalog-card');
+        cards.forEach((card) => {
+          const cardCat = card.getAttribute('data-category');
+          if (category === 'all' || cardCat === category) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+
+        const tabs = document.querySelectorAll('.cat-tab');
+        tabs.forEach((tab) => {
+          const tabCat = tab.getAttribute('data-category');
+          const active = tabCat === category;
+          tab.setAttribute('aria-selected', String(active));
+          if (active) {
+            tab.classList.remove('bg-white', 'hover:bg-timber-100', 'text-stone-800', 'border-stone-300');
+            tab.classList.add('bg-timber-900', 'text-brass', 'border-timber-900');
+          } else {
+            tab.classList.remove('bg-timber-900', 'text-brass', 'border-timber-900');
+            tab.classList.add('bg-white', 'hover:bg-timber-100', 'text-stone-800', 'border-stone-300');
+          }
+        });
+      } catch (error) {
+        console.error('Category filter error:', error);
+      }
+    }
+
+    function sendWhatsAppInquiry(event) {
+      event.preventDefault();
+      try {
+        const name = document.getElementById('customerName').value.trim();
+        const phone = document.getElementById('customerPhone').value.trim();
+        const category = document.getElementById('orderCategory').value;
+        const details = document.getElementById('orderDetails').value.trim();
+        const notes = document.getElementById('orderNotes').value.trim();
+
+        let message = '*HR Enterprises Inquiry*\n';
+        message += `Name: ${name}\n`;
+        message += `Phone: ${phone}\n`;
+        message += `Item/Service: ${category}\n`;
+        if (details) message += `Size/Details: ${details}\n`;
+        if (notes) message += `Message: ${notes}\n`;
+
+        const waUrl = `https://wa.me/923456998618?text=${encodeURIComponent(message)}`;
+        window.open(waUrl, '_blank', 'noopener,noreferrer');
+
+        const noticeEl = document.getElementById('formNotice');
+        noticeEl.textContent = i18n[currentLang].noticeText;
+        noticeEl.classList.remove('hidden');
+      } catch (error) {
+        console.error('WhatsApp form error:', error);
+      }
+    }
+  </script>
+</body>
+</html>
